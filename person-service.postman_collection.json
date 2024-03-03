@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "c48c64a9-deb6-4dcd-91a0-e5d10706a81e",
+		"name": "person-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33343833"
+	},
+	"item": [
+		{
+			"name": "persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/persons"
+			},
+			"response": []
+		},
+		{
+			"name": "persons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bob\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/persons"
+			},
+			"response": []
+		},
+		{
+			"name": "persons",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url}}/persons/1"
+			},
+			"response": []
+		},
+		{
+			"name": "personsById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"My name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/persons/2"
+			},
+			"response": []
+		},
+		{
+			"name": "persons",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"My name\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/persons/2?name=supername",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"persons",
+						"2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "supername"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
